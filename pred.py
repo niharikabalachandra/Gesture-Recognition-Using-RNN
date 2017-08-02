@@ -56,7 +56,7 @@ class SimpleListener(Leap.Listener):
                 current_time=frame.timestamp
                 time_delta=current_time-previous_time
                 data_left=[[] for _ in range(12)]
-                if time_delta>4000000 and time_delta<1000000000:
+                if time_delta>4e6 and time_delta<1e9:
                     for i in range(59,-1,-1):
                         data_left[0].append(0)
                         data_left[1].append(round(controller.frame(i).hand(lefthand.id).stabilized_palm_position[0],4))
@@ -107,7 +107,7 @@ class SimpleListener(Leap.Listener):
                 current_time=frame.timestamp
                 time_delta=current_time-previous_time
                 data_right=[[] for _ in range(12)]
-                if time_delta>5000000 and time_delta<1000000000:
+                if time_delta>5e6 and time_delta<1e9:
                     for i in range(59,-1,-1):
                         data_right[0].append(0)
                         data_right[1].append(round(controller.frame(i).hand(righthand.id).stabilized_palm_position[0],4))
