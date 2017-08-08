@@ -9,7 +9,7 @@ from imblearn.over_sampling import SMOTE
 import time
 
 # Import dataset
-dataset = pd.read_csv('/home/sharath/LeapDeveloperKit_2.3.1+31549_linux/LeapSDK/src/one_file.csv',header=None)
+dataset = pd.read_csv('~/LeapDeveloperKit_2.3.1+31549_linux/LeapSDK/src/one_file.csv',header=None)
 
 #Split to Data samples and labels
 x = dataset.iloc[:, 1:11].values
